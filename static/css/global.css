@@ -1,6 +1,10 @@
 
+/* font-family: 'Major Mono Display', monospace; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Rajdhani', sans-serif; */
+
 .editor_static {
-  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Rajdhani', serif;
   color: rgb(101, 51, 170);
   font-size: 2rem;
 }
@@ -11,29 +15,47 @@ header {
 }
 
 header .navbar-brand {
-    color:#dc3545 !important;
-    font-size: 2.6rem;
-    line-height: 2.6rem;
-    font-family: 'Major Mono Display', monospace;
-    font-weight: 100;
-    text-transform: uppercase;
+  color:#dc3545 !important;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 header .navbar-nav .nav-item {
-  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Rajdhani', serif;
   font-size: 1.4rem;
-  color: #ffffff !important;
+  color: #ffffff !important;  
+}
 
+header .navbar-nav .nav-item :hover{
+  color: #a33;
 }
 
 .mainLayout_container {
-  background-color: #333333;
+  background-color: #E3E3E3;
 }
 
-.content_container{
+.content_container {
   margin: 0 auto;
   max-width: 800px;
-  background-color: #DEDEDE;
+  min-height: 800px;
+  background-color: #E3E3E3;
   padding: 2rem;
-  border: 1px #dc3545 solid;
+  border-left: 1px #333 solid;
+}
+
+.content_container h1{
+  font-family: 'Playfair Display', serif;
+  color: #333333;
+  font-size: 2rem;;
+}
+
+
+.codex-editor {
+  font-family: 'Playfair Display', serif;
+  color:#883f46;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }

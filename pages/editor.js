@@ -8,8 +8,7 @@ import EditorJS from 'react-editor-js';
 import CheckList from '@editorjs/checklist';
 
 import { EDITOR_JS_TOOLS } from './editorTools'
-
-// import Header from '@editorjs/header';
+import staticdata from '../static/staticdata.json'
 // import List from '@editorjs/list'; 
 
 
@@ -17,7 +16,7 @@ const editor = new EditorJS({
   /**
    * Id of Element that should contain Editor instance
    */
-  holder: 'editorjs',
+  holder: 'editorjs'
    
 })
 
@@ -30,9 +29,12 @@ class ReactEditor extends Component {
     return (
       <>
         <MainLayout>
-          <h2>start write something here:</h2>
-          <EditorJS holder="custom">
-            <div id="custom" />
+          <h1>start writing content right here:</h1>
+          <EditorJS 
+            holder='custom'
+            tools={EDITOR_JS_TOOLS}
+            data={staticdata}>
+            <div id='custom'  />
           </EditorJS>
         </MainLayout>
       </>
