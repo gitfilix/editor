@@ -8,7 +8,8 @@ class Home extends Component {
     return(
       <>
         <MainLayout>
-        <h1>starting page: hi there </h1>
+        <h1>Starting page: Hi there !</h1>
+        <p>a lousy static startpage for this hackaton app</p>
         </MainLayout>
       </>
     )

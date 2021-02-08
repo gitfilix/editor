@@ -16,13 +16,32 @@ const editor = new EditorJS({
   /**
    * Id of Element that should contain Editor instance
    */
-  holder: 'editorjs'
-   
+  holder: 'editorjs',
+  placeholder: 'Let`s write an awesome story!',
+  autofocus: true,
+  onReady: () => {
+    console.log('Editor.js is ready to work!')
+  },
+  data: {}
 })
 
+const testme = (data) => {
+ console.log(data)
+}
+
+const handleSave = async (data)=> {
+  console.log('received this data:',data)
+  // editor.save().then((outputData) => {
+    // console.log('Article data: ', outputData)
+  // }).catch((error) => {
+    // console.log('Saving failed: ', error)
+  // });
+  const savedData = await editor.save()
+  console.log('saved this text', savedData)
+}
 
 class ReactEditor extends Component {
-  
+
   render() {
     // this works only on the client
     if(window === 'undefined') return null
@@ -30,12 +49,18 @@ class ReactEditor extends Component {
       <>
         <MainLayout>
           <h1>start writing content right here:</h1>
-          <EditorJS 
-            holder='custom'
+          {/* <EditorJS tools={EDITOR_JS_TOOLS} /> */}
+         <EditorJS  
+            holder='custom' 
             tools={EDITOR_JS_TOOLS}
-            data={staticdata}>
+            // data={staticdata} 
+            onChange={() =>{console.log(`something changed`)}}
+            save={() =>{ handleSave(data)}}
+            logLevel={'INFO'}
+            > 
             <div id='custom'  />
-          </EditorJS>
+        </EditorJS>
+        <button onClick={() =>handleSave(editor.data)} >save me!</button>
         </MainLayout>
       </>
     )

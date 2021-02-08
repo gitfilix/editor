@@ -6,7 +6,7 @@
 .editor_static {
   font-family: 'Rajdhani', serif;
   color: rgb(101, 51, 170);
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 
@@ -29,21 +29,21 @@ header .navbar-nav .nav-item {
   color: #ffffff !important;  
 }
 
-header .navbar-nav .nav-item :hover{
-  color: #a33;
+header .navbar-nav .nav-item:hover{
+  color: #a33 !important;
 }
 
 .mainLayout_container {
-  background-color: #E3E3E3;
+  background-color: #F8F8F8;
 }
 
 .content_container {
   margin: 0 auto;
-  max-width: 800px;
-  min-height: 800px;
-  background-color: #E3E3E3;
-  padding: 2rem;
-  border-left: 1px #333 solid;
+  max-width: 1400px;
+  min-height: 900px;
+  background-color: #FFF;
+  padding: 3rem;
+  border-left: 1px #333 dashed;
 }
 
 .content_container h1{
@@ -52,10 +52,16 @@ header .navbar-nav .nav-item :hover{
   font-size: 2rem;;
 }
 
+.content_container p{
+  font-family: 'Playfair Display', serif;
+  color: #333333;
+  font-size: 1.6rem;;
+}
+
 
 .codex-editor {
-  font-family: 'Playfair Display', serif;
-  color:#883f46;
+   font-family: 'Playfair Display', serif;
+  color:#541f24;
   font-size: 1.4rem;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 }
