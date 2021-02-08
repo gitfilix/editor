@@ -4,10 +4,10 @@ import Link from 'next/link'
 const Header = () => (
   <>
     <header>
-      <div className='container'>
+      <div className='header_container'>
         <nav className='navbar navbar-expand-lg navbar-light'>
           <Link href='/'>
-            <a className='navbar-brand'>Editor App</a>
+            <a className='navbar-brand'>EDITOR Application</a>
           </Link>
           <div className='collapse navbar-collapse'>
             <div className='navbar-nav'>
