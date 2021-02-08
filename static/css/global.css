@@ -1,0 +1,26 @@
+
+.contact_static {
+  font-family: 'Cormorant Unicase', serif;
+  color: rgb(101, 51, 170);
+  font-size: 2rem;
+}
+
+
+header {
+    background: #333333;
+}
+
+header .navbar-brand {
+    color:#dc3545 !important;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+header .navbar-nav .nav-item {
+  font-family: 'Cormorant Unicase', serif;
+  color: #ffffff !important;
+
+}
