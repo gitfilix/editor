@@ -1,18 +1,39 @@
 import React, { Component } from 'react'
 import MainLayout from '../components/layouts/mainLayout'
-// header injection
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+// Editor REACT js 
+// import EditorJS = dynamic(import('react-editor-js'),{ssr:false})
+import EditorJS from 'react-editor-js';
+import CheckList from '@editorjs/checklist';
 
-class Contact extends Component {
+import { EDITOR_JS_TOOLS } from './editorTools'
+
+// import Header from '@editorjs/header';
+// import List from '@editorjs/list'; 
+
+
+const editor = new EditorJS({
+  /**
+   * Id of Element that should contain Editor instance
+   */
+  holder: 'editorjs',
+   
+})
+
+
+class ReactEditor extends Component {
+  
   render() {
+    // this works only on the client
+    if(window === 'undefined') return null
     return (
       <>
-        <Head>
-          <title>custom contact page header title</title>
-        </Head>
         <MainLayout>
-          <h1 style={{ color: '#A33' }}>editor page goes here</h1>
-          <p className='editor_static'>this is static information</p>
+          <h2>start write something here:</h2>
+          <EditorJS holder="custom">
+            <div id="custom" />
+          </EditorJS>
         </MainLayout>
       </>
     )
@@ -20,4 +41,4 @@ class Contact extends Component {
 }
 
 
-export default Contact
+export default ReactEditor

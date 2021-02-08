@@ -3,6 +3,7 @@ import Header from '../includes/header'
 // header injection
 import Head from 'next/head'
 
+// import EditorJS from '@editorjs/editorjs';
 
 const MainLayout = (props) => (
   <>
@@ -14,7 +15,7 @@ const MainLayout = (props) => (
     </Head>
     <div className='mainLayout_container'>
       <Header />
-      <div className='container'>
+      <div className='content_container'>
         {props.children}
       </div>
     </div>

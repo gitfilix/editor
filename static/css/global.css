@@ -1,5 +1,5 @@
 
-.contact_static {
+.editor_static {
   font-family: 'Cormorant Unicase', serif;
   color: rgb(101, 51, 170);
   font-size: 2rem;
@@ -21,6 +21,19 @@ header .navbar-brand {
 
 header .navbar-nav .nav-item {
   font-family: 'Cormorant Unicase', serif;
+  font-size: 1.4rem;
   color: #ffffff !important;
 
+}
+
+.mainLayout_container {
+  background-color: #333333;
+}
+
+.content_container{
+  margin: 0 auto;
+  max-width: 800px;
+  background-color: #DEDEDE;
+  padding: 2rem;
+  border: 1px #dc3545 solid;
 }
